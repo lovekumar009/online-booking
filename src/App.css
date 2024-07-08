@@ -1,0 +1,139 @@
+body {
+  background-color: #191919;
+  color: aliceblue;
+}
+
+.slider {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.buynow-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 52, 230, 1) 0%,
+    rgba(104, 60, 192, 1) 35%,
+    rgba(104, 60, 192, 1) 100%
+  );
+}
+
+.heading-effect {
+  font-family: Arial, sans-serif;
+  font-size: 2.2rem;
+  color: #8c52ff; /* Replace with the exact color code if needed */
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  white-space: NoWrap;
+}
+
+.heading-effect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 50%;
+  background-color: #8c52ff;
+}
+
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 50%;
+  background-color: #8c52ff;
+}
+
+.container {
+  position: relative;
+  width: fit-content;
+}
+
+.container p {
+  line-height: 1.5rem;
+  width: 18rem;
+}
+
+.image {
+  display: block;
+  width: 20rem;
+  height: 17rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #272b2d;
+  overflow: hidden;
+  width: 20rem;
+  height: 0;
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.modal-bg {
+  background: rgb(25 23 23 / 50%);
+}
+
+/* Responsive Screens */
+
+@media screen and (max-width: 500px) {
+  .slider {
+    width: 26rem;
+    height: 26rem;
+  }
+  .policies-wrapper {
+    gap: 2rem;
+  }
+
+  .policies {
+    width: 100%;
+  }
+
+  .modal-bg {
+    background: #191919;
+  }
+
+  .mob-modal {
+    height: 80vw;
+    width: 80vw;
+    overflow-y: auto;
+  }
+}
